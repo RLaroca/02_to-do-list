@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    list-style: none;
+}
+
+body{
+    flex: 1;
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #005ac2, #150050);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.to-do-app{
+    flex: 1;
+    min-height: 30vh;
+    min-width: 25vw;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;   
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+.to-do-app .row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(228, 228, 228, 0.5);
+    border-radius: 10px;
+}
+
+.to-do-app h1{
+    font-size: 20px;
+    color: #1d1d1d;
+    padding: 10px;
+    letter-spacing: 0.15rem;
+    text-decoration:underline;
+}
+
+.to-do-app #todo-list{
+    width: 100%;
+    min-height: 200px;
+    padding: 10px;
+    background-color: transparent;
+    flex: 1;
+    overflow-y: auto;
+    margin: 10px auto;
+  
+}
+
+.to-do-app #todo-list li{
+    display: flex;
+    flex: 1;
+    padding: 10px;
+    color: #1d1d1d;
+    position: relative;
+    padding: 12px 8px 12px 30px
+}
+
+input{
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+input:focus{
+    outline: none;
+    background-color: transparent;
+}
+
+.row button{
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+ul li::before{
+    flex: 1;
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border-color: #919191;
+    background-color: #fff;
+    top: 12px;
+    left: 8px;
+    padding: 2px;
+}
+
+ul li:hover::before{
+    box-shadow: 0px 0px 1px 1px;
+    cursor: pointer;
+}
+
+ul li.checked{
+    text-decoration: line-through ;
+    text-decoration-color: rgb(121, 121, 121);
+
+}
+ul li.checked::before{
+    padding: 2px;
+    display: flex;
+    color: green;
+    align-items: center;
+    content: "\2714";
+    background-color: #ff4d4d;
+    border: 1px solid #fff;
+}
+
+ul li span{
+    display: flex;
+    align-self: center;
+    flex: 1;
+    border-radius: 50%;
+    max-width: fit-content;
+    background-color: rgba(0, 0, 0, 0.322);
+    padding: 2px;
+    font-size: 0.5rem;
+    position: absolute;
+    right: 0;
+    image-orientation: center;
+    margin-right: 5px;
+}
+
+ul li span:hover{
+    background-color: rgba(131, 131, 131, 0.808);
+    cursor: pointer;
+    font-size: 0.6rem;
+}
